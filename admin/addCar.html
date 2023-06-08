@@ -152,7 +152,7 @@
                                         <i class="fa-solid fa-users"></i>
                                         <div class="number">2</div>
                                     </div>
-                                    <button class="btn">Remove</button>
+                                    <button id="button" class="btn">Remove</button>
                                 </div>
                             </div>
                         </div>
@@ -165,16 +165,16 @@
         </div>
         <div class="addCar">
             <h3>Add a Car</h3><br>
-            <form class="fields">
+            <form class="fields" onsubmit="carsData()">
                 <!-- <label for="html">Car Name</label> -->
-                <input type="text"  class="field" name="fav_language" placeholder="Car Name"><br><br>
+                <input type="text"  class="field" id="name" name="fav_language" placeholder="Car Name"><br><br>
                 <!-- <label for="css">Cost/Day</label> -->
-                <input type="text" class="field" name="fav_language" placeholder="Cost/Day"><br><br>
+                <input type="text" class="field" id="price" name="fav_language" placeholder="Cost/Day"><br><br>
                 <!-- <label for="javascript">No of Seats</label> -->
-                <input type="text" class="field" name="fav_language" placeholder="No of Seats"><br><br>
+                <input type="text" class="field" id="number" name="fav_language" placeholder="No of Seats"><br><br>
                 <!-- <label for="javascript">Image</label> -->
                 <input type="file" class="field" name="fav_language" placeholder="Upload Image"><br><br>
-                <button class="add">Add Car</button>   
+                <button class="submit" onclick="carsData()">Add Car</button>   
               </form>
         </div>
     </div>
