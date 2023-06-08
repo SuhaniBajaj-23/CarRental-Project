@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form validation || Learningrobo</title>
+  <link rel="stylesheet" href="css\login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+  <div class="wrapper">
+    <header>SignUp </header>
+    <form action="#" onsubmit="clickU()">
+        
+    <div class="field email">
+        <div class="input-area">
+          <input type="text" id="name" placeholder="Full Name" required>
+          <i class="icon fas fa-envelope"></i>
+        </div>
+      </div>
+      <div class="field email">
+        <div class="input-area">
+          <input type="email" id="email" placeholder="Email Address" required>
+          <i class="icon fas fa-envelope"></i>
+        </div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" id="password" placeholder="Password" required>
+          <i class="icon fas fa-lock"></i>
+        </div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" id="cpassword" placeholder=" Confirm Password" required>
+          <i class="icon fas fa-lock"></i>
+        </div>
+      </div>
+      <div class="pass-txt"><a href="#">Forgot password?</a></div>
+      <input type="submit" id="submit" onClick="clickU()" value="SignUp">
+    </form>
+    <div class="sign-txt">Already a member? <a href="loginU.html">Login now</a></div>
+</div>
+  </div>
+  <script src="js\signupdb.js"></script>
+</body>
+</html>
