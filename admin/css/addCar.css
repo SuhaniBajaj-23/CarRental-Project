@@ -1,0 +1,255 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+/* NAVBAR */
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1 rem;
+}
+
+a:hover{
+    color: black;
+}
+
+header{
+    /* position: fixed; */
+    padding: 0 2rem;
+}
+
+.navbar{
+    /* position: fixed; */
+    color: black;
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap:2rem;
+}
+
+.navbar .toggle_btn{
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    background-color: rgba(59, 57, 57, 0.19);
+    color: black;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: black;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu{
+    position:absolute;
+    right: 2rem;
+    top:60px;
+    width: 300px;
+    height: 0;
+    background-color: rgb(80, 77, 77);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} */
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+/* RESPONSIVE DESIGN */
+@media only screen and (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn{
+        display: none ;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+.body{
+    display: flex;
+}
+
+.fleet{
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    margin: 20px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.fleet .heading{
+    display: flex;
+}
+
+.fleet .left{
+    width: 70%;
+}
+
+.fleet .right{
+    width: 30%;
+}
+
+.heading .cate {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fleet .line{
+    border-left: 2px solid rgb(12, 12, 12);
+}
+
+.cards{
+    display: grid;
+    grid-template-columns:auto auto  ;
+    /* gap: 60px; */
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.card{
+    padding: 10px;
+}
+
+.image{
+    /* background-color: #b8c6dbb5; */
+    border-radius: 20px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fleet .low{
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    margin-top: 10px;
+}
+
+.btn{
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    height: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+    outline: 0 !important;
+    border: none;
+    outline: none;
+}
+
+.btn:hover{
+    scale: 1.05;
+}
+
+.btn:active{
+    scale: 0.95;
+}
+
+.fleet .seater{
+    
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    background-color: #a9b1bd;
+    width: 14%;
+    align-items: center;
+}
+
+.seater .number{
+    padding-left: 8px;
+}
+
+.addCar {
+    padding: 40px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.273); 
+    /* background-color:rgba(103, 136, 152, 0.541) ; */
+    height: fit-content;
+    border-radius:20px ;
+    margin: 20px;
+}
+
+.field{
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+.add{
+    padding: 5px;
+}
+

@@ -19,6 +19,6 @@
         return;
         } 
         console.log("Successfully logged in");
-        window.location.href='../mybookings.html'
+        window.location.href='../addCar.html'
         };
     }
