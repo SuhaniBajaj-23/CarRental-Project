@@ -34,39 +34,14 @@ function signup(userData, userType) {
 
     request.onsuccess = function (event) {
         console.log(`Successfully signed up as ${userType}`);
+        window.location.href = '../loginU.html';
     };
 
     request.onerror = function (event) {
         console.error(`Error signing up as ${userType}: ${event.target.errorCode}`);
     };
-
 }
 
- function clickA(){
-        
-    var  name=document.querySelector('#name').value;
-    var  password=document.querySelector('#password').value;
-    var  email=document.querySelector('#email').value;
-    var  cPassword=document.querySelector('#cpassword').value;
-    var passwordStrength = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
-
-    if(!passwordStrength.test(password)){
-        alert('Password should contain 1 uppercase letter, 1 lowercase letter, 1 numerical, 1 special character and should be atleast 8 characters long');
-    }else if (password !== cPassword) {
-        alert('please enter the same password in confirm password');
-    }
-    
-    var Data = {
-        name: name,
-        email: email,
-        password:password,
-        cPassword:cPassword
-    };
-
-    signup(Data, 'Admins');
-    window.location.href = '';
-
- }
 
  function clickU(){
         
@@ -90,6 +65,6 @@ function signup(userData, userType) {
     };
 
     signup(Data,'Users');
-    window.location.href = '';
+    
     
  }
