@@ -92,7 +92,7 @@ header{
     border-radius: 20px;
     /* padding: 60px; */
     /* background-color: black; */
-    background-image: url("../assets/insideCar.jpg");
+    background-image: url("../../assets/insideCar.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
