@@ -4,11 +4,11 @@ function logout(){
     window.location.href = "../../index.html"
 }
 
-var divContainer = document.querySelector('.carContainer');
+var divContainer = document.querySelector('.viewCars');
 // var userKey = JSON.parse(localStorage.getItem('userKey'));
 var basket;
 function read() {
-  var idb = indexedDB.open('Accounts', 2);
+  var idb = indexedDB.open('fleetDB', 2);
   idb.onsuccess = function () {
     let request = idb.result;
     let transaction = request.transaction('User', 'readonly');

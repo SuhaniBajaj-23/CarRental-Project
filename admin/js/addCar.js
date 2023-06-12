@@ -1,5 +1,6 @@
-var carForm = document.querySelector(".fields");
+
 var carsData = function () {
+    var carForm = document.querySelector(".fields");
   var idb = indexedDB.open("carDatabase", 4);
 
   idb.onerror = function (e) {
@@ -12,7 +13,7 @@ var carsData = function () {
   };
 
   idb.onupgradeneeded = function () {
-    var request = idb.result;
+    var request = idb.target.result;
     console.log("Database upgraded successfully");
     request.createObjectStore("cars", { autoIncrement: true });
   };
@@ -23,7 +24,7 @@ var carsData = function () {
     var store = tx.objectStore("cars");
     // const carData = [
     //     { name: 'Ford', price: 20, seater: 4 }];
-    // store.add(car);
+    // store.add(carData);
     if (checkEmpty()) {
       alert("car added successfully");
       store.add({
@@ -31,7 +32,7 @@ var carsData = function () {
         price: carForm[1].value,
         number: carForm[2].value,
       });
-      displayCars();
+    //   displayCars();
       location.reload();
     } else {
       alert("fill all deatils");
@@ -45,53 +46,6 @@ function checkEmpty() {
     carForm[0].value != "" && carForm[1].value != "" && carForm[2].value != ""
   );
 }
-
-// var request = indexedDB.open('carDatabase', 2);
-// var db;
-
-// request.onerror = function(event) {
-//   console.log('Error opening database');
-// };
-
-// request.onsuccess = function(event) {
-//   db = event.target.result;
-//   console.log('Database opened successfully');
-//   displayCars();
-// };
-
-// request.onupgradeneeded = function(event) {
-//   db = event.target.result;
-//   console.log('Database upgraded successfully');
-
-//   // Create an object store for cars
-//   const objectStore = db.createObjectStore('cars', { keyPath: 'id', autoIncrement: true });
-// };
-
-// // Handle form submission
-
-// carForm.addEventListener('submit', function(event) {
-//   event.preventDefault();
-
-//   // Get input values
-//   const name = document.querySelector('#name').value;
-//   const price = document.querySelector('#price').value;
-//   const number = document.querySelector('#number').value;
-// //   const color = document.getElementById('color').value;
-
-//   // Save car to IndexedDB
-//   const transaction = db.transaction(['cars'], 'readwrite');
-//   const objectStore = transaction.objectStore('cars');
-//   const car = { name: name, price: price, number: number};
-//   const request = objectStore.add(car);
-
-//   request.onsuccess = function(event) {
-//     console.log('Car added to IndexedDB');
-//     displayCars(); // Update the displayed cars
-//   };
-
-//   // Reset the form
-//   carForm.reset();
-// });
 
 // Display all cars
 function displayCars() {
