@@ -17,7 +17,7 @@
         console.log(currRes.value);
         localStorage.setItem('code', 'secret');
         localStorage.setItem('userKey', JSON.stringify(currRes.key));
-        window.location.href = '../mybooking.html';
+        window.location.href = '../addCar.html';
       } else {
         currRes.continue();
         console.log('Enter valid details');

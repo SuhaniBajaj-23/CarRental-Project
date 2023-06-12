@@ -34,7 +34,7 @@ function signup(userData, userType) {
 
     request.onsuccess = function (event) {
         console.log(`Successfully signed up as ${userType}`);
-        window.location.href = '../loginU.html';
+        window.location.href = 'loginU.html';
     };
 
     request.onerror = function (event) {

@@ -11,7 +11,7 @@
   <div class="container">
   <div class="wrapper">
     <header>Login User </header>
-    <form action="#" id="loginForm">
+    <form action="#" id="loginForm" onsubmit="loginAction()">
       <div class="field email">
         <div class="input-area">
           <input type="email" id="email" placeholder="Email Address" required>
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="pass-txt"><a href="#">Forgot password?</a></div>
-      <input type="submit" value="Login">
+      <input type="submit" onclick="loginAction()"  value="Login">
     </form>
     <div class="sign-txt">Not a member? <a href="signupU.html">Signup now</a></div>
 </div>

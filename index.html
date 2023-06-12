@@ -11,8 +11,8 @@
                 <div class="logo"><a href="">LIMSON</a></div>
                 <ul class="links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Our Services</a></li>
+                    <!-- <li><a href="">About Us</a></li> -->
+                    <li><a href="#service">Our Services</a></li>
                     <li><a href="user/fleet.html">Our Fleets</a></li>
                 </ul>
                 <a href ="option.html" class="action_btn">Get Started</a>
@@ -33,36 +33,46 @@
                 <span class="limo">Limousine<br> VIP Transfers</span>
                 <div class="right">
                     <span class="lorem">Welcome to our limousine rental website!<br> We offer luxury transportation services for<br> any occasion, from weddings and proms to<br> corporate events ad air transports.</span>
-                    <button class="openf"><b>Open Fleet</b></button>
+                    <button class="openf" onclick = "window.location.href='user/fleet.html';"><b>Open Fleet</b></button>
                 </div>
             </div>
             <img class="hero-image" src="assets\maybach1.png">
             <div class="lower">
                 <div class="box">
                     <div class="pickup">
-                        <span class="label">Pick Up Address</span>
-                        <span class="">From:address,airport</span>
-                    </div>
-                    <div class="vl"></div>
-                    <div class="pickup">
-                        <span class="label">Drop Off Address</span>
-                        <span class="">Distance,hourly,flat rate</span>
+                        <!-- <span class="label">Pick Up Address</span> -->
+                        <label for="cars" class="label">Pick up Address</label>
+                            <select name="cars" id="cars">
+                            <option value="volvo">Rohini, Delhi</option>
+                            <option value="saab">Pitampura, Delhi</option>
+                            <option value="mercedes">Model Town, Delhi</option>
+                            <option value="audi">Kings way camp, Delhi</option>
+                            <option value="mercedes">Kirti Nagar, Delhi</option>
+                            <option value="mercedes">Rajouri Garden, Delhi</option>
+                            <option value="mercedes">Cannaught Place, Delhi</option>
+                            <option value="mercedes">Friends Colony, Delhi</option>
+                            </select>
                     </div>
                     <div class="vl"></div>
                     <div class="pickup">
                         <span class="label">Pick Up Date</span>
-                        <span class="">Apr 19,2023</span>
+                        <input class="" type="date">
+                    </div>
+                    <div class="vl"></div>
+                    <div class="pickup">
+                        <span class="label">Drop off Date</span>
+                        <input type="date" class="">
                     </div>
                     <div class="vl"></div>
                     <div class="pickup">
                         <span class="label">Pick Up Time</span>
-                        <span class="">12:25 am</span>
+                        <input class="" type="time">
                     </div>
-                    <button class="book"><i class="fa-solid fa-calendar-days"></i><br>Book Now</button>
+                    <button class="book" onclick = "window.location.href='user/loginU.html';"><i class="fa-solid fa-calendar-days"></i><br>Book Now</button>
                 </div>
             </div>
         </div>
-        <div class="service">
+        <div class="service" id="service">
             <div class="leftmost">
                 <span class="Our_Services">Our Services</span>
                 <p class="service_line">We understand that every event is unique, and we strive to<br> accomodate your individual needs.</p>
@@ -138,7 +148,7 @@
                 </div>
                 <br><br>
                 <div class="openall">
-                    <button class="open_all_vehicles">Open All Vehicles</button>
+                    <button class="open_all_vehicles" onclick = "window.location.href='user/fleet.html';">Open All Vehicles</button>
                 </div>
             </div>
         </div>

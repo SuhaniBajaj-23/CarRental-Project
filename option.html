@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    <button onclick="window.location.href='admin/loginA.html';">Admin</button>
-    <button onclick="window.location.href='user/loginU.html';" >User</button>
-  </body>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button {
+      margin-bottom: 10px;
+      padding: 10px 20px;
+      background-color: #bfd8ed;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button class="button" onclick="window.location.href='admin/loginA.html';"><b>Admin</b></button>
+    <button class="button" onclick="window.location.href='user/loginU.html';"><b>User</b></button>
+  </div>
+</body>
 </html>
