@@ -38,18 +38,21 @@ request.onsuccess = function(event) {
     { name: 'Audi', price: 50, seater: 4 },
     // Add more car data here
   ];
-
+  
   // Add each car data to the object store
   carData.forEach(function(car) {
     const request = objectStore.add(car);
     request.onsuccess = function(event) {
       console.log('Car data added successfully');
-    };
+      // console.log(carData.length())
+    }
+    ;
+    
     request.onerror = function(event) {
       console.error('Error adding car data', event.target.error);
     };
   });
-
+  
   // Close the transaction when all car data is added
   transaction.oncomplete = function() {
     console.log('All car data added successfully');

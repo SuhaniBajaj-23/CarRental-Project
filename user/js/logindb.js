@@ -1,6 +1,6 @@
 var loginForm = document.querySelector('#loginForm');
 var loginAction = function () {
-  var idb = indexedDB.open('carRental', 2);
+  var idb = indexedDB.open('carRental', 6);
 
   idb.onsuccess = function (e) {
     var request = idb.result;
@@ -18,7 +18,7 @@ var loginAction = function () {
           console.log(cursor.value);
           localStorage.setItem('code', 'secret');
           localStorage.setItem('userKey', JSON.stringify(cursor.key));
-          location.href = '../mybooking.html';
+          window.location.href = '../mybooking.html';
         } else {
           cursor.continue();
         }
