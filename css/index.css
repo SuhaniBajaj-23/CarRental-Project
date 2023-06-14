@@ -84,63 +84,8 @@ header{
     scale: 0.95;
 }
 
-/* DROPDOWN MENU */
-.dropdown_menu{
-    position:absolute;
-    right: 2rem;
-    top:60px;
-    width: 300px;
-    height: 0;
-    background-color: rgb(80, 77, 77);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    display: none;
-}
-
-.dropdown_menu li{
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* .dropdown_menu .action_btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-} */
-
-.dropdown_menu.open{
-    height: 240px;
-}
-
-/* RESPONSIVE DESIGN */
-@media only screen and (max-width: 992px) {
-    .navbar .links,
-    .navbar .action_btn{
-        display: none ;
-    }
-
-    .navbar .toggle_btn{
-        display: block;
-    }
-
-    .dropdown_menu{
-        display: block;
-    }
-}
-
-@media only screen and (max-width: 576px) {
-    .dropdown_menu{
-        left: 2rem;
-        width: unset;
-    }
-}
-
 /* HERO */
 .hero{
-        /* background-image: linear-gradient(to right, #59483e, #2b211c); */
         background-image: linear-gradient(to right, #a9b1bd, #657997);
         margin-left: 20px;
         margin-right: 20px;
@@ -190,7 +135,6 @@ header{
     margin-right: 10rem;
 }
 .hero .lower{
-    /* background-image: linear-gradient(to bottom,  #a9b1bd, #657997); */
     border-radius: 10px;
     margin-top: -3%;
     padding-top: 10px;
@@ -222,10 +166,8 @@ header{
     background-color: #ffffff67;
     border: none;
     color: black;
-    /* padding: 8px 15px; */
     text-align: center;
     text-decoration: none;
-    /* display: inline-block; */
     border-radius: 10px;
     height: 65px;
     width: 8vw;
@@ -246,7 +188,6 @@ header{
     margin-bottom: 80px;
     margin-left: 150px;
     margin-right: 150px;
-    /* height: 70vh; */
 }
 
 .service .leftmost{
@@ -303,7 +244,6 @@ header{
 .cards{
     display: grid;
     grid-template-columns:auto auto auto ;
-    /* gap: 60px; */
     justify-content: space-between;
     padding-top: 30px;
 }
