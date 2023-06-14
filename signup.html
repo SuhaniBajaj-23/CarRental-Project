@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up Form</title>
-  <link rel="stylesheet" href="css\login.css">
+  <title>Login Form validation || Learningrobo</title>
+  <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
   <div class="container">
   <div class="wrapper">
     <header>SignUp </header>
-    <form action="#" onsubmit="clickA()">
+    <form action="#" onsubmit="clickU()">
+      <div class="field email">
+        <div class="input-area">
+          <label for="type">Choose a type</label>
+          <select name="type" id="type">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+      </div>
     <div class="field email">
         <div class="input-area">
           <input type="text" id="name" placeholder="Full Name" required>
@@ -37,11 +46,12 @@
         </div>
       </div>
       <div class="pass-txt"><a href="#">Forgot password?</a></div>
-      <input type="submit" id="submit" onClick="clickA()" value="SignUp">
+      <input type="submit" id="submit" onClick="clickU()" value="SignUp">
     </form>
-    <div class="sign-txt">Already a member? <a href="loginA.html">Login now</a></div>
+    <div class="sign-txt">Already a member? <a href="login.html">Login now</a></div>
 </div>
   </div>
-  <script src="js\signupdb.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/signup.js"></script>
 </body>
 </html>

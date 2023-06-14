@@ -42,8 +42,8 @@
                             
                         </div>
                     </div>
-                    <div class="cards">
-                        <div class="card">
+                    <div class="cards container">
+                        <!-- <div class="card">
                             <div class="image">
                                 <img style="height: 200px; width: 400px;" src="..\assets\car9\car2.png">
                             </div><br>
@@ -155,7 +155,7 @@
                                     <button id="button" class="btn">Remove</button>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         
                     </div>
                 </div>
@@ -164,19 +164,27 @@
         <div class="addCar">
             <h3>Add a Car</h3><br>
             <form class="fields" onsubmit="carsData()">
-                <!-- <label for="html">Car Name</label> -->
                 <input type="text"  class="field" id="name" name="fav_language" placeholder="Car Name"><br><br>
-                <!-- <label for="css">Cost/Day</label> -->
+                <input type="text"  class="field" id="noPlate" name="fav_language" placeholder="Number Plate"><br><br>
                 <input type="text" class="field" id="price" name="fav_language" placeholder="Cost/Day"><br><br>
-                <!-- <label for="javascript">No of Seats</label> -->
                 <input type="text" class="field" id="number" name="fav_language" placeholder="No of Seats"><br><br>
-                <!-- <label for="javascript">Image</label> -->
                 <input type="file" class="field" name="fav_language" placeholder="Upload Image"><br><br>
                 <button class="submit" onclick="carsData()">Add Car</button>   
               </form>
         </div>
     </div>
+    <script>
+        var check = localStorage.getItem("code")
+    
+        if (check == "secret") {
+    
+        } else {
+            window.location.href = "login.html"
+        }
+      </script>
+    
     <script src="https://kit.fontawesome.com/a81a450ca1.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
     <script src="js/addCar.js"></script>
 
 </body>

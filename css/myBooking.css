@@ -157,11 +157,26 @@ header{
     /* width: 20%; */
     width: fit-content;
     align-items: center;
-    float: right;
+    float: left;
 }
 
 .seater .number{
     padding-left: 8px;
+}
+
+.remove{
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-top: 5
+    0px;
+    padding: 10px;
+    background-color: #a9b1bd6b;
+    /* width: 20%; */
+    width: fit-content;
+    align-items: center;
+    float: right;
+    border: none;
+    outline: none;
 }
 
 .carname{
