@@ -9,11 +9,8 @@ function rent(key){
     var transaction1 = db.transaction('Car','readonly');
     var objectStore1 = transaction1.objectStore("Car");
     var data = objectStore1.get(key);
-    // console.log("hello")
     if (checkEmpty()) {
     data.onsuccess=(event)=>{
-        // console.log("got it")
-        // console.log(data)
                 var tx = db.transaction('Booking','readwrite');
                 var os = tx.objectStore("Booking");
                 var fare = totalFare(data);
@@ -31,6 +28,7 @@ function rent(key){
                 }
 
                 os.add(details);
+                alert("car booked")
             }
 
     data.onerror = (event)=>{
@@ -72,11 +70,9 @@ setTimeout(()=>{
     function displayCars() {
         var transaction = db.transaction("Car", "readonly");
         var objectStore = transaction.objectStore("Car").openCursor();
-        // const getAllRequest = objectStore.getAll();
     
         objectStore.onsuccess = function (event) {
           var cursor= event.target.result;
-          // const carData = objectStore.result;/
           console.log(cursor)
           const grid = document.querySelector(".cards");
           if(cursor){

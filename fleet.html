@@ -8,7 +8,7 @@
         <div class="navbar">
             <div class="logo"><a href="">LIMSON</a></div>
             <ul class="links">
-                <li><a href="indexU.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="myBooking.html">My Bookings</a></li>
                 <li><a href="fleet.html">Our Fleets</a></li>
               </ul>
@@ -17,21 +17,23 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-        <div class="dropdown_menu ">
-            <li><a href="hero">Home</a></li>
-            <li><a href="about">Home</a></li>
-            <li><a href="services">Home</a></li>
-            <li><a href="contact">Home</a></li>
-            <a href ="login.html" class="action_btn">Get Started</a>
-        </div>
     </header>
     <div class="lower">
         <form id="detailsForm">
         <div class="box">
             
             <div class="pickup">
-                <span class="label">Pick Up Address</span>
-                <input class="" type="text" placeholder="choose a location" required>
+                <label for="cars" class="label">Pick up Address</label>
+                            <select name="Place" id="cars" required>
+                            <option value="Rohini">Rohini, Delhi</option>
+                            <option value="Pitampura">Pitampura, Delhi</option>
+                            <option value="Model Town">Model Town, Delhi</option>
+                            <option value="Kings Way Camp">Kings way camp, Delhi</option>
+                            <option value="Kirti Nagar">Kirti Nagar, Delhi</option>
+                            <option value="Rajouri Greden">Rajouri Garden, Delhi</option>
+                            <option value="Cannaught Place">Cannaught Place, Delhi</option>
+                            <option value="Friends Colony">Friends Colony, Delhi</option>
+                            </select>
             </div>
             <div class="vl"></div>
             <div class="pickup">
@@ -76,6 +78,15 @@
             </div>
         </div>
     </div>
+    <script>
+        var check = localStorage.getItem("code")
+
+        if (check == "secret") {
+
+        } else {
+            window.location.href = "login.html"
+        }
+    </script>
     <script src="https://kit.fontawesome.com/a81a450ca1.js" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
     <script src="js/fleet.js"></script>

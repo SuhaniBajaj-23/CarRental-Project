@@ -12,8 +12,8 @@ var loginAction = function () {
           cursor.result.type === 'admin'
         ) { 
           console.log(cursor.value);
-          localStorage.setItem('code', 'secret');
-          localStorage.setItem('userKey', JSON.stringify(cursor.key));
+          localStorage.setItem('codeAdmin', 'secretAdmin');
+          localStorage.setItem('adminKey', JSON.stringify(currRes.key));
           window.location.href = 'addCar.html';
         } else if (
             cursor.result.password === loginForm[1].value &&
@@ -22,7 +22,7 @@ var loginAction = function () {
                 console.log(cursor.value);
                 localStorage.setItem('code', 'secret');
                 localStorage.setItem('userKey', JSON.stringify(cursor.key));
-                window.location.href = '../myBooking.html';
+                window.location.href = 'myBooking.html';
         }
         else {
           cursor.continue();

@@ -43,120 +43,6 @@
                         </div>
                     </div>
                     <div class="cards container">
-                        <!-- <div class="card">
-                            <div class="image">
-                                <img style="height: 200px; width: 400px;" src="..\assets\car9\car2.png">
-                            </div><br>
-                            <div class="label">
-                                <div class="top">
-                                    <div class="name">Mersedes Benz S Class</div>
-                                <div class="price"><b>$40/day</b></div>
-                                </div>
-                                <div class="low">
-                                    <div class="seater">
-                                        <i class="fa-solid fa-users"></i>
-                                        <div class="number">2</div>
-                                    </div>
-                                    <button class="btn">Remove</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="image">
-                                <img style="height: 200px; width: 400px;" src="..\assets\car9\car2.png">
-                            </div><br>
-                            <div class="label">
-                                <div class="top">
-                                    <div class="name">Mersedes Benz S Class</div>
-                                <div class="price"><b>$40/day</b></div>
-                                </div>
-                                <div class="low">
-                                    <div class="seater">
-                                        <i class="fa-solid fa-users"></i>
-                                        <div class="number">2</div>
-                                    </div>
-                                    <button class="btn">Remove</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="image">
-                                <img style="height: 200px; width: 400px;" src="../assets\car9\car2.png">
-                            </div><br>
-                            <div class="label">
-                                <div class="top">
-                                    <div class="name">Mersedes Benz S Class</div>
-                                <div class="price"><b>$40/day</b></div>
-                                </div>
-                                <div class="low">
-                                    <div class="seater">
-                                        <i class="fa-solid fa-users"></i>
-                                        <div class="number">2</div>
-                                    </div>
-                                    <button class="btn">Remove</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="image">
-                                <img style="height: 200px; width: 400px;" src="../assets\car9\car2.png">
-                            </div><br>
-                            <div class="label">
-                                <div class="top">
-                                    <div class="name">Mersedes Benz S Class</div>
-                                <div class="price"><b>$40/day</b></div>
-                                </div>
-                                <div class="low">
-                                    <div class="seater">
-                                        <i class="fa-solid fa-users"></i>
-                                        <div class="number">2</div>
-                                    </div>
-                                    <button class="btn">Remove</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="image">
-                                <img style="height: 200px; width: 400px;" src="../assets\car9\car2.png">
-                            </div><br>
-                            <div class="label">
-                                <div class="top">
-                                    <div class="name">Mersedes Benz S Class</div>
-                                <div class="price"><b>$40/day</b></div>
-                                </div>
-                                <div class="low">
-                                    <div class="seater">
-                                        <i class="fa-solid fa-users"></i>
-                                        <div class="number">2</div>
-                                    </div>
-                                    <button class="btn">Remove</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="image">
-                                <img style="height: 200px; width: 400px;" src="../assets\car9\car2.png">
-                            </div><br>
-                            <div class="label">
-                                <div class="top">
-                                    <div class="name">Mersedes Benz S Class</div>
-                                <div class="price"><b>$40/day</b></div>
-                                </div>
-                                <div class="low">
-                                    <div class="seater">
-                                        <i class="fa-solid fa-users"></i>
-                                        <div class="number">2</div>
-                                    </div>
-                                    <button id="button" class="btn">Remove</button>
-                                </div>
-                            </div>
-                        </div> -->
-                        
                     </div>
                 </div>
             </div>
@@ -168,20 +54,20 @@
                 <input type="text"  class="field" id="noPlate" name="fav_language" placeholder="Number Plate"><br><br>
                 <input type="text" class="field" id="price" name="fav_language" placeholder="Cost/Day"><br><br>
                 <input type="text" class="field" id="number" name="fav_language" placeholder="No of Seats"><br><br>
-                <input type="file" class="field" name="fav_language" placeholder="Upload Image"><br><br>
+                <input type="file" class="field" id="image" name="fav_language" placeholder="Upload Image"><br><br>
                 <button class="submit" onclick="carsData()">Add Car</button>   
               </form>
         </div>
     </div>
     <script>
-        var check = localStorage.getItem("code")
+        var check = localStorage.getItem("codeAdmin")
     
-        if (check == "secret") {
+        if (check == "secretAdmin") {
     
         } else {
             window.location.href = "login.html"
         }
-      </script>
+    </script>
     
     <script src="https://kit.fontawesome.com/a81a450ca1.js" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>

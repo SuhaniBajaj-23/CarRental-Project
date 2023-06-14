@@ -29,7 +29,7 @@ setTimeout(()=>{
                                         <div><i class="fa-solid fa-users"></i></div>
                                         <div class="number">${car.number}</div>
                                     </div>
-                                        <button class="remove">Remove</button>
+                                        <button class="remove" onclick="removeCar('${car.noPlate}')">Remove</button>
                                     </div>
                                 </div>`;
           grid.appendChild(divv)
@@ -39,3 +39,14 @@ setTimeout(()=>{
       };
       displayBookings();
 },900)
+
+function removeCar(id) {
+  const transactions = db.transaction("Booking", "readwrite");
+  const objectStores = transactions.objectStore("Booking");
+  const request = objectStores.delete(id);
+
+  request.onsuccess = function (event) {
+    console.log("Car removed");
+    location.reload();
+  };
+}
