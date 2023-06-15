@@ -96,7 +96,7 @@ setTimeout(()=>{
 function removeCar(id) {
   const transactions = db.transaction("Car", "readwrite");
   const objectStores = transactions.objectStore("Car");
-  const request = objectStores.delete(id);
+  const request = objectStores.delete(id); s
 
   request.onsuccess = function (event) {
     console.log("Car removed");

@@ -14,7 +14,11 @@ function rent(key){
                 var tx = db.transaction('Booking','readwrite');
                 var os = tx.objectStore("Booking");
                 var fare = totalFare(data);
+                var currentDate = new Date();
+                var time = currentDate.getTime();
+                const enUSFormatter = new Intl.DateTimeFormat('en-US');
                 var details ={
+                    time:enUSFormatter.format(time),
                     noPlate: data.result.noPlate,
                     name: data.result.name,
                     price: data.result.price,
