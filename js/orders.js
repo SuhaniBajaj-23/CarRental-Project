@@ -23,7 +23,6 @@ setTimeout(()=>{
                                         <div class="frompick">From : ${car.address}</div>
                                         <div class="dates">${car.pickDate} - ${car.dropDate}</div>
                                         </div>
-                                        
                                         <div class="seater">
                                         <div class="number">Booked On: ${car.time}</div>
                                     </div>
@@ -31,7 +30,6 @@ setTimeout(()=>{
                                 </div>`;
           grid.appendChild(divv)
             }
-            
           cursor.continue();
           }
         };
