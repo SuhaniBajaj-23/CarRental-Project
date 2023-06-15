@@ -79,9 +79,9 @@
         </div>
     </div>
     <script>
-        var check = localStorage.getItem("code")
+        var check = localStorage.getItem("currentUserEmailUser")
 
-        if (check == "secret") {
+        if (check) {
 
         } else {
             window.location.href = "login.html"

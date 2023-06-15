@@ -18,7 +18,9 @@ function rent(key){
                 var time = currentDate.getTime();
                 const enUSFormatter = new Intl.DateTimeFormat('en-US');
                 var details ={
+                    owner:data.result.owner,
                     time:enUSFormatter.format(time),
+                    user: localStorage.getItem("currentUserEmailUser"),
                     noPlate: data.result.noPlate,
                     name: data.result.name,
                     price: data.result.price,
@@ -85,7 +87,7 @@ setTimeout(()=>{
             let divv = document.createElement('div');
               divv.innerHTML = `<div class="card">
                                     <div class="image">
-                                        <img style="height: 200px; width: 400px;" src='../assets/car9/car2.png'>
+                                        <img style="height: 200px; width: 400px;" src=${car.image}>
                                     </div><br>
                                     <div class="label">
                                         <div class="top">

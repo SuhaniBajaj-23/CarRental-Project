@@ -10,7 +10,8 @@ setTimeout(()=>{
           const grid = document.querySelector(".viewCars");
           if(cursor){
             var car = cursor.value;
-            let divv = document.createElement('div');
+            if(car.owner === localStorage.getItem("currentUserEmailAdmin")){
+              let divv = document.createElement('div');
               divv.innerHTML = `<div class="cards">
                                     <div class="image">
                                         <img src=${car.image} style="height: 250px; width: 400px;">
@@ -29,6 +30,8 @@ setTimeout(()=>{
                                     </div>
                                 </div>`;
           grid.appendChild(divv)
+            }
+            
           cursor.continue();
           }
         };

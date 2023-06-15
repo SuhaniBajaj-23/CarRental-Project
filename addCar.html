@@ -52,9 +52,9 @@
         </div>
     </div>
     <script>
-        var check = localStorage.getItem("codeAdmin")
+        var check = localStorage.getItem("currentUserEmailAdmin")
     
-        if (check == "secretAdmin") {
+        if (check) {
     
         } else {
             window.location.href = "login.html"

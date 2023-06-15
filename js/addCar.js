@@ -8,6 +8,7 @@ var carsData = function () {
     if (checkEmpty()) {
       alert("car added successfully");
       store.add({
+        owner:localStorage.getItem("currentUserEmailAdmin"),
         name: carForm[0].value,
         noPlate: carForm[1].value,
         price: carForm[2].value,
@@ -64,7 +65,8 @@ setTimeout(()=>{
       const grid = document.querySelector(".cards");
       if(cursor){
         var car = cursor.value;
-        let divv = document.createElement('div');
+        if(car.owner === localStorage.getItem("currentUserEmailAdmin")){
+          let divv = document.createElement('div');
           divv.innerHTML = `<div class="card">
                                 <div class="image">
                                     <img style="height: 200px; width: 400px;" src=${car.image}>
@@ -85,6 +87,7 @@ setTimeout(()=>{
                                 </div>
                             </div>`;
       grid.appendChild(divv)
+        }
       cursor.continue();
       }
     };
