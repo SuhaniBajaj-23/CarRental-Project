@@ -19,6 +19,7 @@ function rent(key){
                     name: data.result.name,
                     price: data.result.price,
                     number: data.result.number,
+                    image:data.result.image,
                     address:carForm[0].value,
                     pickDate:carForm[1].value,
                     dropDate:carForm[2].value,

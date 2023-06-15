@@ -3,11 +3,9 @@ setTimeout(()=>{
 
         var transaction = db.transaction("Booking", "readonly");
         var objectStore = transaction.objectStore("Booking").openCursor();
-        // const getAllRequest = objectStore.getAll();
     
         objectStore.onsuccess = function (event) {
           var cursor= event.target.result;
-          // const carData = objectStore.result;/
           console.log(cursor)
           const grid = document.querySelector(".viewCars");
           if(cursor){
@@ -15,7 +13,7 @@ setTimeout(()=>{
             let divv = document.createElement('div');
               divv.innerHTML = `<div class="cards">
                                     <div class="image">
-                                        <img src="../assets/car9/car1.png" style="height: 250px; width: 400px;">
+                                        <img src=${car.image} style="height: 250px; width: 400px;">
                                     </div>
                                     <div class="deets">
                                         <div class="carname">${car.name}</div>

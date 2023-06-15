@@ -13,7 +13,7 @@ var loginAction = function () {
         ) { 
           console.log(cursor.value);
           localStorage.setItem('codeAdmin', 'secretAdmin');
-          localStorage.setItem('adminKey', JSON.stringify(currRes.key));
+          localStorage.setItem('adminKey', JSON.stringify(cursor.key));
           window.location.href = 'addCar.html';
         } else if (
             cursor.result.password === loginForm[1].value &&
