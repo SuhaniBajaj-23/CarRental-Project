@@ -1,84 +1,3 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
-body{
-    background-color: white;
-    background-size: cover;
-    background-position: center;
-}
-
-/* NAVBAR */
-li{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-    font-size: 1 rem;
-    padding-bottom: 7px;
-}
-
-a:hover{
-    color: black;
-}
-
-a.active{
-    border-bottom: 3px solid black;
-}
-header{
-    padding: 0 2rem;
-}
-
-.navbar{
-    color: black;
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content:space-between ;
-}
-
-.navbar .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar .links{
-    display: flex;
-    gap:2rem;
-}
-
-
-.action_btn{
-    background-color: rgba(59, 57, 57, 0.19);
-    color: black;
-    padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: scale 0.2 ease;
-}
-
-.action_btn:hover{
-    scale: 1.05;
-    color: black;
-}
-
-.action_btn:active{
-    scale: 0.95;
-}
-
 .lower{
     border-radius: 10px;
     padding-top: 10px;
@@ -101,13 +20,18 @@ header{
 }
 
 .lower .pickup{
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     padding: 15px;
+    align-items: center;
+    color: #aabfde;
 }
 
 .pickup .input{
     font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .lower .book{
