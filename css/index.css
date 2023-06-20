@@ -55,12 +55,6 @@ header{
     gap:2rem;
 }
 
-.navbar .toggle_btn{
-    color: black;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
 
 .action_btn{
     background-color: rgba(59, 57, 57, 0.19);
