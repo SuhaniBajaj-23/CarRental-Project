@@ -89,10 +89,7 @@ header{
 
 
 .lower{
-    /* background-image: linear-gradient(to bottom,  #a9b1bd, #657997); */
-
     border-radius: 10px;
-    /* margin-top: -3%; */
     padding-top: 10px;
     padding-left: 80px;
     padding-right: 80px;
@@ -115,7 +112,11 @@ header{
 .lower .pickup{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 15px;
+}
+
+.pickup .input{
+    font-size: 15px;
 }
 
 .lower .book{
