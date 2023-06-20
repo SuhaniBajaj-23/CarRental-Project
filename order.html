@@ -14,33 +14,31 @@
         <div class="navbar">
           <div class="logo"><a href="">LIMSON</a></div>
           <ul class="links">
-            <!-- <li><a href="index.html">Home</a></li> -->
             <li><a href="addCar.html">DashBoard</a></li>
             <li><a href="order.html" class="active">Orders</a></li>
           </ul>
-          <a onclick="logout()" class="action_btn" >logout</a>
+          <a onclick="logout()" class="action_btn">logout</a>
         </div>
       </header>
     </div>
     <div class="orders">Orders Received</div>
     <div class="bookings">
-        
-        <div class="viewCars" id="viewCars">
-        </div>
+      <div class="viewCars" id="viewCars"></div>
     </div>
     <script>
-        var check = localStorage.getItem("currentUserEmailAdmin")
-    
-        if (check) {
-    
-        } else {
-            window.location.href = "login.html"
-        }
+      var check = localStorage.getItem("currentUserEmailAdmin");
+
+      if (check) {
+      } else {
+        window.location.href = "login.html";
+      }
     </script>
     <script src="js/index.js"></script>
     <script src="js\orders.js"></script>
     <script src="js/logout.js"></script>
-    <script src="https://kit.fontawesome.com/a81a450ca1.js" crossorigin="anonymous"></script>
-
+    <script
+      src="https://kit.fontawesome.com/a81a450ca1.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
