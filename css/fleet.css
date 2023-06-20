@@ -149,6 +149,8 @@ header{
 
 .fleet .left{
     width: 70%;
+    font-size: 30px;
+    font-weight: 700 ;
 }
 
 .fleet .right{

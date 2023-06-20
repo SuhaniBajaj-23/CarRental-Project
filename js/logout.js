@@ -1,5 +1,5 @@
 function logout() {
-    var logout = localStorage.setItem("code", "logout");
+    localStorage.clear();
     window.location.href = "index.html";
   }
   

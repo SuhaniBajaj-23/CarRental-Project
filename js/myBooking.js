@@ -6,7 +6,7 @@ setTimeout(()=>{
     
         objectStore.onsuccess = function (event) {
           var cursor= event.target.result;
-          console.log(cursor)
+          // console.log(cursor)
           const grid = document.querySelector(".viewCars");
           if(cursor){
             var car = cursor.value;

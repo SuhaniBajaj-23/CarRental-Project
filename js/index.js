@@ -36,7 +36,7 @@ request.onupgradeneeded = (event) => {
             keyPath: 'email',
             autoIncrement: true
         });
-        user.createIndex('email', 'email', { unique: false });
+        user.createIndex('email', 'email', { unique: true });
     }
     
     if (!db.objectStoreNames.contains('Car')) {

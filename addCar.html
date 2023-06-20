@@ -7,7 +7,7 @@
         <div class="navbar">
             <div class="logo"><a href="">LIMSON</a></div>
             <ul class="links">
-                <li><a href="indexA.html">Home</a></li>
+                <!-- <li><a href="index.html">Home</a></li> -->
                 <li><a href="addCar.html"> Dashboard</a></li>
                 <li><a href="order.html">Orders</a></li>
             </ul>
@@ -20,18 +20,18 @@
     <div class="body">
         <div class="yourCars">
             <div class="fleet">
-                <h3>My Cars</h3><br>
+                <h2>My Cars</h2><br>
                 <div class="container">
                     <div class="heading">
                         <div class="right">
-                            <div class="cate">
+                            <!-- <div class="cate">
                                 <div class="categories">All</div>
                                 <div class="categories">Luxury</div>
                                 <div class="line"></div>
                                 <div class="categories">Business</div>
                                 <div class="line"></div>
                                 <div class="categories">Crossover</div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="cards container">
@@ -40,13 +40,13 @@
             </div>
         </div>
         <div class="addCar">
-            <h3>Add a Car</h3><br>
-            <form class="fields" onsubmit="carsData()">
-                <input type="text"  class="field" id="name" name="fav_language" placeholder="Car Name"><br><br>
-                <input type="text"  class="field" id="noPlate" name="fav_language" placeholder="Number Plate"><br><br>
-                <input type="text" class="field" id="price" name="fav_language" placeholder="Cost/Day"><br><br>
-                <input type="text" class="field" id="number" name="fav_language" placeholder="No of Seats"><br><br>
-                <input type="file" class="field" id="image" name="fav_language" placeholder="Upload Image"><br><br>
+            <h2>Add a Car</h2><br>
+            <form class="fields" >
+                <input type="text"  class="field" id="name" name="fav_language" placeholder="Car Name" required><br><br>
+                <input type="text"  class="field" id="noPlate" name="fav_language" placeholder="Number Plate" required><br><br>
+                <input type="text" class="field" id="price" name="fav_language" placeholder="Cost/Day" required><br><br>
+                <input type="text" class="field" id="number" name="fav_language" placeholder="No of Seats" required><br><br>
+                <input type="file" class="field" id="image" name="fav_language" placeholder="Upload Image" required><br><br>
                 <button class="submit" onclick="carsData()">Add Car</button>   
               </form>
         </div>

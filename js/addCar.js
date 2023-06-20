@@ -15,7 +15,7 @@ var carsData = function () {
         number: carForm[3].value,
         image: String(carPicInput),
         stock: 1
-      });
+      }); 
       
       location.reload();
     } else {
@@ -27,7 +27,7 @@ var carsData = function () {
 
 function checkEmpty() {
   return (
-    carForm[0].value != "" && carForm[1].value != "" && carForm[2].value != ""
+    carForm[0].value != "" && carForm[1].value != "" && carForm[2].value != "" && carForm[3].value != "" && carForm[4].value != ""
   );
 }
 
@@ -99,7 +99,7 @@ setTimeout(()=>{
 function removeCar(id) {
   const transactions = db.transaction("Car", "readwrite");
   const objectStores = transactions.objectStore("Car");
-  const request = objectStores.delete(id); s
+  const request = objectStores.delete(id); 
 
   request.onsuccess = function (event) {
     console.log("Car removed");
