@@ -12,6 +12,7 @@ setTimeout(()=>{
             var car = cursor.value;
             if(car.owner === localStorage.getItem("currentUserEmailAdmin")){
               let divv = document.createElement('div');
+              var user = car.user.replace(/[" [\]]/g, '');
               divv.innerHTML = `<div class="cards">
                                     <div class="image">
                                         <img src=${car.image} style="height: 200px; width: 350px;">
@@ -24,7 +25,10 @@ setTimeout(()=>{
                                         <div class="dates">${car.pickDate} to ${car.dropDate}</div>
                                         </div>
                                         <div class="seater">
-                                        <div class="number">Booked On: ${car.time}</div>
+                                        <div class="number">Booked On : ${car.time}</div>
+                                    </div>
+                                    <div class="booker">
+                                        <div class="number">Booked by : ${user}</div>
                                     </div>
                                     </div>
                                 </div>`;

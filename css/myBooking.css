@@ -21,11 +21,17 @@ a{
     text-decoration: none;
     color: black;
     font-size: 1 rem;
+    padding-bottom: 7px;
 }
 
 a:hover{
     color: black;
 }
+
+a.active{
+    border-bottom: 3px solid black;
+}
+
 
 header{
     padding: 0 10rem;
@@ -61,11 +67,12 @@ header{
 }
 
 .action_btn{
+    background-color: rgba(59, 57, 57, 0.19);
     color: black;
     padding: 0.5rem 1rem;
     border: none;
     outline: none;
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
@@ -151,6 +158,19 @@ header{
 
 .seater .number{
     padding-left: 8px;
+}
+
+.booker{
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-top: 5
+    0px;
+    padding: 10px;
+    display: flex;
+    /* background-color: #a9b1bd6b; */
+    width: fit-content;
+    align-items: center;
+    float: left;
 }
 
 
