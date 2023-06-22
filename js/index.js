@@ -17,7 +17,7 @@ if (!window.indexedDB) {
 let db=null;
 
 
-const request = indexedDB.open('DataBase', 3);
+const request = indexedDB.open('DataBase', 1);
 
 request.onerror = (event) => {
     console.error(`Database error: ${event.target.errorCode}`);
@@ -25,7 +25,7 @@ request.onerror = (event) => {
 
 request.onsuccess = (event) => {
     // add implementation here
-    console.log("DB successfully created");
+    // console.log("DB successfully created");
     db=event.target.result;
 };
 
@@ -46,14 +46,13 @@ request.onupgradeneeded = (event) => {
         });
         car.createIndex('noPlate', 'noPlate', { unique: true });
     }
-    
-
     if (!db.objectStoreNames.contains('Booking')) {
         let booking = db.createObjectStore('Booking', {
-            keyPath: 'noPlate',
+            // keyPath: 'id',
             autoIncrement: true
         });
-        booking.createIndex('noPlate', 'noPlate', { unique: true });
+        console.log("done")
+        booking.createIndex('noPlate','noPlate', { unique: false });
     }
     
 };

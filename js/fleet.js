@@ -15,15 +15,13 @@ function rent(key){
                 var os = tx.objectStore("Booking");
                 var req = os.openCursor(key);
                 req.onsuccess =(e)=>{
-                    var res = e.target.result; 
-                    if(res){
-                        alert("car is currently unavailable");
-                    }else{
                         var currentDate = new Date();
                     var time = currentDate.getTime();
                     const enUSFormatter = new Intl.DateTimeFormat('en-US');
 
                     var fare = totalFare(data);
+                    var days = day(data);
+
                     if (typeof fare === 'undefined') {
                         alert("enter valid details");
                     }else{
@@ -41,15 +39,15 @@ function rent(key){
                             dropDate:carForm[2].value,
                             pickTime:carForm[3].value,
                             totalFare: fare,
+                            days:days,
                             stock: 0
                         }
         
                         os.add(details);
                         alert("car booked")
                     }
-                    }
+                    
                 }
-                // console.log("entered event")
                 
                 
                 }
@@ -64,7 +62,7 @@ function rent(key){
 
 function checkEmpty() {
     return (
-      carForm[0].value != "" && carForm[1].value != "" && carForm[2].value != ""
+      carForm[0].value != "" && carForm[1].value != "" && carForm[2].value != "" && carForm[3].value != ""
     );
   }
 
@@ -82,6 +80,16 @@ function checkEmpty() {
         var totalFare = parseInt(data.result.price*days);
         return totalFare;
     }
+  }
+
+  function day(data){
+    var d1 = new Date(carForm[1].value);
+    var d2 = new Date(carForm[2].value);
+
+    var time = d2.getTime() - d1.getTime();
+    var days = time / (1000 * 3600 *24);
+
+        return days;
   }
 
   var isValidDate = function (date) {
@@ -115,7 +123,7 @@ setTimeout(()=>{
                                                 <i class="fa-solid fa-users"></i>
                                                 <div class="number">${car.number}</div>
                                             </div>
-                                            <button class="btn" onclick="rent('${car.noPlate}')">Book</button>
+                                            <button class="btn" onclick="check('${car.noPlate}')">Book</button>
                                         </div>
                                         
                                     </div>
@@ -128,43 +136,44 @@ setTimeout(()=>{
       displayCars();
 },900)
 
-// function check(key){
-//     var transaction = db.transaction("Booking", "readonly");
-//     var objectStore = transaction.objectStore("Booking").openCursor();
-//     var x=0;
+function check(key){
+    var transaction = db.transaction("Booking", "readonly");
+    var objectStore = transaction.objectStore("Booking").openCursor();
+    var x=0;
 
-//     objectStore.onsuccess = function (event) {
-//         var cursor= event.target.result;
-//         if(cursor){
-//           var car = cursor.value;
-//           if(car.noPlate === key){
-//             var d1=new Date(car.pickDate);
-//             var d2=new Date(car.dropDate);
-//             var date1 = d1.getTime();
-//             var date2 = d2.getTime();
-//             var d3=  new Date(carForm[1].value);
-//             var d4 = new Date(carForm[2].value);
-//             var date3 = d3.getTime();
-//             var date4 = d4.getTime();
-//             console.log(date1);
-//             console.log(date2);
-//             console.log(date3);
-//             console.log(date4);
-//             if(date4<date1){
-//                 x=0;
-//             }else if(date3>date2){
-//                 x=0;
-//             }else{
-//                 x=1;
-//             }
-//           }
-//           cursor.continue();
-//         }
-//         if(x===0){
-//             rent(key);
-//         }else{
-//             alert("car unavailable within these dates");
-
-//         }
-//       };
-// }
+    objectStore.onsuccess = function (event) {
+        var cursor= event.target.result;
+        if(cursor){
+          var car = cursor.value;
+          if(car.noPlate === key){
+            var d1=new Date(car.pickDate);
+            var d2=new Date(car.dropDate);
+            var d3=  new Date(carForm[1].value);
+            var d4 = new Date(carForm[2].value);
+            console.log(d1);
+            console.log(d2);
+            console.log(d3);
+            console.log(d4);
+            console.log(d1>d2)
+            if(d4<d1 || d3>d2){
+                
+            }
+            else{
+                alert("car unavailable within these dates");
+                x=x+1;
+                return
+            }
+          }
+          cursor.continue();
+          return;
+        }
+        console.log(x);
+        if(x===0){
+            rent(key);
+        }else{
+            alert("car unavailable within these dates");
+        }
+        
+      };
+      
+}

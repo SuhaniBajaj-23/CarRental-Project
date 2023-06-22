@@ -2,6 +2,7 @@ var carForm = document.querySelector(".fields");
 var carPic= document.querySelector('#image');
 var carPicInput = null;
 
+
 var carsData = function () {
     var tx = db.transaction("Car", "readwrite");
     var store = tx.objectStore("Car");
