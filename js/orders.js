@@ -18,14 +18,14 @@ setTimeout(()=>{
                                         <img src=${car.image} style="height: 200px; width: 350px;">
                                     </div>
                                     <div class="deets">
-                                        <div class="carname">${car.name}</div>
+                                        <div class="carname">${car.carName}</div>
                                         <div class="price">Total Fare - $${car.totalFare}</div>
                                         <div class="flex">
                                         <div class="frompick">From : ${car.address}</div>
                                         <div class="dates">${car.pickDate} to ${car.dropDate}</div>
                                         </div>
                                         <div class="seater">
-                                        <div class="number">Booked On : ${car.time}</div>
+                                        <div class="number">Booked On : ${car.bookingDate}</div>
                                     </div>
                                     <div class="booker">
                                         <div class="number">Booked by : ${user}</div>

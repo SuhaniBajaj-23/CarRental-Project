@@ -9,8 +9,8 @@ function loginAction() {
         const cur =event.target.result;
         if(cur){
           if (
-            cur.value.email === loginForm[0].value &&
-            cur.value.password === loginForm[1].value &&
+            cur.value.email === loginForm[0].value.trim() &&
+            cur.value.password === loginForm[1].value.trim() &&
             cur.value.type === 'admin'
           ) { 
             var currentUserEmail = JSON.parse("[]");
@@ -19,8 +19,8 @@ function loginAction() {
             
             window.location.href = 'addCar.html';
           } else if (
-              cur.value.email === loginForm[0].value &&
-              cur.value.password === loginForm[1].value &&
+              cur.value.email === loginForm[0].value.trim() &&
+              cur.value.password === loginForm[1].value.trim() &&
               cur.value.type === 'user'
           ){
                   var currentUserEmail = JSON.parse("[]");

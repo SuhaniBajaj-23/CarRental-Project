@@ -8,14 +8,15 @@ var carsData = function () {
     var store = tx.objectStore("Car");
     if (checkEmpty()) {
       alert("car added successfully");
+      var owner = localStorage.getItem("currentUserEmailAdmin");
+      owner.replace(/[" [\]]/g, '');
       store.add({
-        owner:localStorage.getItem("currentUserEmailAdmin"),
-        name: carForm[0].value,
+        owner:owner,
+        carName: carForm[0].value,
         noPlate: carForm[1].value,
-        price: carForm[2].value,
-        number: carForm[3].value,
+        rentPrice: carForm[2].value,
+        seater: carForm[3].value,
         image: String(carPicInput),
-        stock: 1
       }); 
       
       location.reload();
@@ -40,11 +41,9 @@ carPic.addEventListener('change', function(e) {
       var reader = new FileReader();
 
       reader.onload = function(e) {
-          // fileDisplayArea.innerHTML = "";
           var img = new Image();
           carPicInput = reader.result;
           console.log(carPicInput);
-          // fileDisplayArea.appendChild(img);
 
       }
       reader.readAsDataURL(file);	
@@ -74,13 +73,13 @@ setTimeout(()=>{
                                 </div><br>
                                 <div class="label">
                                     <div class="top">
-                                        <div class="name">${car.name}</div>
-                                    <div class="price"><b>$ ${car.price} /day</b></div>
+                                        <div class="name">${car.carName}</div>
+                                    <div class="price"><b>$ ${car.rentPrice} /day</b></div>
                                     </div>
                                     <div class="low">
                                         <div class="seater">
                                             <i class="fa-solid fa-users"></i>
-                                            <div class="number">${car.number}</div>
+                                            <div class="number">${car.seater}</div>
                                         </div>
                                         <button class="btn" onclick="removeCar('${car.noPlate}')">Remove</button>
                                     </div>

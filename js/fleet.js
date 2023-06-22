@@ -27,24 +27,24 @@ function rent(key){
                     }else{
                         var details = {
                             owner:data.result.owner,
-                            time:enUSFormatter.format(time),
+                            bookingDate:enUSFormatter.format(time),
                             user: localStorage.getItem("currentUserEmailUser"),
                             noPlate: data.result.noPlate,
-                            name: data.result.name,
-                            price: data.result.price,
-                            number: data.result.number,
+                            carName: data.result.carName,
+                            rentPrice: data.result.rentPrice,
+                            seater: data.result.seater,
                             image:data.result.image,
                             address:carForm[0].value,
                             pickDate:carForm[1].value,
                             dropDate:carForm[2].value,
                             pickTime:carForm[3].value,
                             totalFare: fare,
-                            days:days,
-                            stock: 0
+                            daysRented:days,
                         }
         
                         os.add(details);
-                        alert("car booked")
+                        alert("car booked");
+                        location.reload();
                     }
                     
                 }
@@ -77,7 +77,7 @@ function checkEmpty() {
     if(time<0 || !isValidDate(d1) || !isValidDate(d2) || today>d1){
         // alert('enter valid dates!');
     }else{
-        var totalFare = parseInt(data.result.price*days);
+        var totalFare = parseInt(data.result.rentPrice*days);
         return totalFare;
     }
   }
@@ -115,13 +115,13 @@ setTimeout(()=>{
                                     </div><br>
                                     <div class="label">
                                         <div class="top">
-                                            <div class="name">${car.name}</div>
-                                        <div class="price"><b>$ ${car.price} /day</b></div>
+                                            <div class="name">${car.carName}</div>
+                                        <div class="price"><b>$ ${car.rentPrice} /day</b></div>
                                         </div>
                                         <div class="low">
                                             <div class="seater">
                                                 <i class="fa-solid fa-users"></i>
-                                                <div class="number">${car.number}</div>
+                                                <div class="number">${car.seater}</div>
                                             </div>
                                             <button class="btn" onclick="check('${car.noPlate}')">Book</button>
                                         </div>

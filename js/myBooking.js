@@ -15,7 +15,7 @@ setTimeout(()=>{
                                         <img src=${cursor.value.image} style="height: 200px; width: 350px;">
                                     </div>
                                     <div class="deets">
-                                        <div class="carname">${cursor.value.name}</div>
+                                        <div class="carname">${cursor.value.carName}</div>
                                         <div class="price">Total Fare - $${cursor.value.totalFare}</div>
                                         <div class="flex">
                                         <div class="frompick">From : ${cursor.value.address}</div>
@@ -24,7 +24,7 @@ setTimeout(()=>{
                                         
                                         <div class="seater">
                                         <div><i class="fa-solid fa-users"></i></div>
-                                        <div class="number">${cursor.value.number}</div>
+                                        <div class="number">${cursor.value.seater}</div>
                                     </div>
                                         <button class="remove" onclick="removeCar('${cursor.key}')">Remove</button>
                                     </div>

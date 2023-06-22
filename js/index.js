@@ -1,15 +1,3 @@
-// const toggleBtn = document.querySelector('.toggle_btn')
-// const toggleBtnIcon = document.querySelector('.toggle_btn i')
-// const dropDownMenu =  document.querySelector('.dropdown_menu')
-
-// toggleBtn.onclick = function(){
-//     dropDownMenu.classList.toggle('open')
-//     const isOpen = dropDownMenu.classList.contains('open')
-
-//     toggleBtnIcon.className=isOpen ? 'fa-solid fa-bars' : 'fa-solid fa-xmark'
-// }
-
-
 if (!window.indexedDB) {
     console.log(`Your browser doesn't support IndexedDB`);
     // return;
@@ -24,8 +12,6 @@ request.onerror = (event) => {
 };
 
 request.onsuccess = (event) => {
-    // add implementation here
-    // console.log("DB successfully created");
     db=event.target.result;
 };
 
@@ -48,7 +34,6 @@ request.onupgradeneeded = (event) => {
     }
     if (!db.objectStoreNames.contains('Booking')) {
         let booking = db.createObjectStore('Booking', {
-            // keyPath: 'id',
             autoIncrement: true
         });
         console.log("done")
