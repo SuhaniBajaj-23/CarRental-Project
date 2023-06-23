@@ -1,4 +1,5 @@
 setTimeout(()=>{
+
     function displayOrders() {
 
         var transaction = db.transaction("Booking", "readonly");
@@ -40,6 +41,7 @@ setTimeout(()=>{
       };
       displayOrders();
 },900)
+
 
 function removeCar(id) {
   const transactions = db.transaction("Booking", "readwrite");

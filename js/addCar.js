@@ -12,24 +12,24 @@ var carsData = function () {
       owner.replace(/[" [\]]/g, '');
       store.add({
         owner:owner,
-        carName: carForm[0].value,
-        noPlate: carForm[1].value,
-        rentPrice: carForm[2].value,
-        seater: carForm[3].value,
+        carName: carForm[0].value.trim(),
+        noPlate: carForm[1].value.trim(),
+        rentPrice: carForm[2].value.trim(),
+        seater: carForm[3].value.trim(),
         image: String(carPicInput),
       }); 
       
       location.reload();
     } else {
       alert("fill all details");
-      e.preventDefault();
+      // e.preventDefault();
     }
     displayCars();
   };
 
 function checkEmpty() {
   return (
-    carForm[0].value != "" && carForm[1].value != "" && carForm[2].value != "" && carForm[3].value != "" && carForm[4].value != ""
+    carForm[0].value.trim() != "" && carForm[1].value.trim() != "" && carForm[2].value.trim() != "" && carForm[3].value.trim() != "" && carForm[4].value != ""
   );
 }
 
